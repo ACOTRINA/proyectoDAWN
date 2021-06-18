@@ -1,0 +1,31 @@
+body>section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    box-sizing: border-box;
+    
+}
+
+.developer{
+    flex-basis: 25%;
+    padding: 50px;
+    text-align: center;
+}
+.informacion{
+    padding-top: 5%;
+}
+
+img{
+    max-width: 100%;
+    width: 40%;
+    display: block;
+    margin: auto;
+
+}
+
+.descripcion{
+    text-align: justify;
+    font-size: 0.8rem;
+    margin: 5%;
+}
