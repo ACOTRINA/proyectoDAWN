@@ -1,0 +1,100 @@
+p, h2, h3, h4, h5{
+    color: white;
+    letter-spacing: -0.80px;
+  }
+  
+  section{
+      display: block;
+      margin-top: 3.4rem;
+  }
+  div#main{
+      display: grid;
+      grid-template-columns: 25% 25% 30% 20%;
+      grid-template-rows: auto;
+      grid-template-areas: 
+      "header header header header"
+      ". main sidebar ."
+      "footer footer footer footer";
+      background-image: url("/img/carrito1Transparencia.jpg");
+      background-size: 100%; 
+  }
+  
+  
+  
+  
+  div#main div{
+    margin-top: 60%;
+    margin-bottom: 60%;
+    grid-area: sidebar;
+    text-align: right; 
+  
+  }@media screen and (max-width: 700px) {
+    
+  
+    div#main div{
+      margin-top: 0%;
+      margin-bottom: 0%;
+  
+      grid-area: main;
+      text-align: center;
+    }
+  
+    div#main div h3{
+      font-size: 1rem;
+  
+    }
+  
+    div#main div h2{
+      font-size: 0.75rem !important;
+    }
+  
+  }
+  
+  div#main div h2{
+    font-size: 3.5rem;
+  }
+  
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+  }
+  
+  
+  div#QuienesSomos{
+    display: flex;
+    justify-content: center;
+    background-image: url("/img/satisfaccionTransparencia.jpg");
+    background-size: 100%; 
+    padding: 15%;   
+  }
+  
+  
+  div#changes{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+  }
+  
+  div#QSomos p{
+    font-size: 17px;
+    text-align: justify;
+    
+  
+  }
+  
+  div#changes{
+    text-align: justify;
+  }
+  
+  .linkIndex{
+    font-size: 2rem !important;
+  
+  }
+  .linkMenu{
+    font-size: 1.5rem !important;
+  
+  }
+  
+  /*hasta aqui trabajo yo: Ricardo Salazar, pueden usar las reglas de arriba \^^/, pero con cuidado que puedo cambiarlas en cualquier momento xD */
