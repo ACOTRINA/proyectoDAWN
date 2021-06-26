@@ -1,0 +1,55 @@
+{
+    "productos":[
+
+    {
+    "imagen":"img/muestra.jpg",
+    "nombre": "Producto",
+    "código": "001"
+    },
+    {
+    "imagen":"img/muestra.jpg",
+    "nombre": "Producto",
+    "código": "002"
+    },
+    {
+    "imagen":"img/muestra.jpg",
+    "nombre": "Producto",
+    "código": "003"
+    },
+    {
+    "imagen":"img/muestra.jpg",
+    "nombre": "Producto",
+    "código": "004"
+    },
+    {
+    "imagen":"img/muestra.jpg",
+    "nombre": "Producto",
+    "código": "005"
+    },
+    {
+    "imagen":"img/muestra.jpg",
+    "nombre": "Producto",
+    "código": "006"
+    },
+    {
+    "imagen":"img/muestra.jpg",
+    "nombre": "Producto",
+    "código": "007"
+    },
+    {
+    "imagen":"img/muestra.jpg",
+    "nombre": "Producto",
+    "código": "008"
+    },
+    {
+    "imagen":"img/muestra.jpg",
+    "nombre": "Producto",
+    "código": "009"
+    },
+    {
+    "imagen":"img/muestra.jpg",
+    "nombre": "Producto",
+    "código": "010"
+    }
+    ]
+}
