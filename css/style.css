@@ -96,5 +96,95 @@ p, h2, h3, h4, h5{
     font-size: 1.5rem !important;
   
   }
+
+   
+.footer{
+  display: flex;
+  justify-content: space-between;
+  background: #3A3F44;
+
+}
+
+.footer > img{
+  width: 25%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  padding-left: 2rem;
+}
+
+
+
+.redesSociales{
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  justify-content: center;
+  margin-top: 2%;
+  padding-right: 1rem;
+
+}
+
+
+.redesSociales > div >img{
+  width: 1.5rem;
+  margin: 7%;
+
+}
+
+.redesSociales > div > .fb-icon{
+  width: 0.7rem;
+
+}
+
+.redesSociales > div > h5 {
+  font-size: 0.9em;
+}
+
+.contactenos{
+  margin-top: 3%;
+}
+
+#NuestroEquipo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+/*#NuestroEquipo > div > div{
+  display: flex;
+  justify-content: space-evenly;
+}*/
+
+#NuestroEquipo div{
+  display: flex;
+  justify-content: space-around;
+}
+
+.trabajador{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trabajador > img{
+  width: 1rem;
+}
+
+.social-media-group{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+.Cabecera{
+  margin-bottom: 10rem;
+}
+
+.trabajador p{
+  text-align: center;
+}
   
   /*hasta aqui trabajo yo: Ricardo Salazar, pueden usar las reglas de arriba \^^/, pero con cuidado que puedo cambiarlas en cualquier momento xD */
