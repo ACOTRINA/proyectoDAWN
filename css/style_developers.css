@@ -39,7 +39,7 @@ body>section{
 .descripcion{
     text-align: justify;
     font-size: 0.8rem;
-    margin: 5%;
+    margin-bottom: 5px;
 }
 .enlaces{
     border: 1px solid red;
