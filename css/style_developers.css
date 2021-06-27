@@ -3,10 +3,10 @@
     margin: 0;
 }
 
-h1{
+.titulo_developers{
     color: white;
     border: 1px solid red;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-left: 60px;
 }
 
@@ -84,6 +84,7 @@ body>section{
     /* justify-content: right; */
 }
 #barra-menu>header{
+    margin-top: 25px;
     border: 1px solid white;
     display: grid;
     grid-template-columns: 40% 20% 20% 20%;
