@@ -69,7 +69,7 @@ body>section{
 }
 
 #barra-menu>header{
-    margin-top: 25px;
+    margin-top: 40px;
     border: 1px solid white;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -117,7 +117,7 @@ body>section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    padding-left: 60px;
     /* flex-direction: unset; */
     /* justify-content: right; */
 }
@@ -137,6 +137,7 @@ body>section{
 .container-fluid{
     margin-bottom: 0;
     border: 1px solid blue;
+   
 }
 #pagina_prod{
     margin: 0;
@@ -162,5 +163,6 @@ body>section{
     height: 300px;
     padding: 0;
     border: 1px solid blue;
-    margin: 10px;
+    margin: 10px 50px;
+    width: 200px;
 }
