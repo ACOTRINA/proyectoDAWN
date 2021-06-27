@@ -118,6 +118,7 @@ body>section{
     flex-wrap: wrap;
     padding-left: 60px;
     height: 100%;
+    margin-bottom: 100px;
     /* flex-direction: unset; */
     /* justify-content: right; */
 }
@@ -166,4 +167,5 @@ body>section{
     border: 1px solid blue;
     margin: 10px 50px;
     width: 200px;
+    
 }
