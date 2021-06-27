@@ -4,102 +4,102 @@
     {
     "imagen":"img/Productos/Canecas/Hidraulico.png",
     "nombre": "Hidráulico",
-    "código": "001"
+    "código": "AW-46"
     },
     {
     "imagen":"img/Productos/Canecas/Hidraulico.png",
     "nombre": "Hidráulico",
-    "código": "002"
+    "código": "AW-68"
     },
     {
     "imagen":"img/Productos/Canecas/Hidraulico.png",
     "nombre": "Hidráulico",
-    "código": "003"
+    "código": "AW-100"
     },
     {
     "imagen":"img/Productos/Canecas/Hidraulico.png",
     "nombre": "Hidráulico",
-    "código": "004"
+    "código": "AW-150"
     },
     {
     "imagen":"img/Productos/Canecas/15W40.png",
     "nombre": "SAE CI-4/SL",
-    "código": "005"
+    "código": "15W-40"
     },
     {
     "imagen":"img/Productos/Canecas/SAE-40.png",
     "nombre": "SAE 40 CF/SL",
-    "código": "006"
+    "código": ""
     },
     {
     "imagen":"img/Productos/Tanques/Transmision.png",
     "nombre": "Transmisión",
-    "código": "007"
+    "código": "SAE90"
     },
     {
     "imagen":"img/Productos/Canecas/Transmision.png",
     "nombre": "Transmisión",
-    "código": "008"
+    "código": "SAE140"
     },
     {
     "imagen":"img/Productos/Canecas/Transmision.png",
     "nombre": "Transmisión",
-    "código": "009"
+    "código": "SAE200"
     },
     {
     "imagen":"img/Productos/Canecas/25W60.png",
     "nombre": "SAE CF",
-    "código": "010"
+    "código": "25W-60"
     },
     {
     "imagen":"img/Productos/Tanques/Hidraulico.png",
     "nombre": "Hidráulico",
-    "código": "001"
+    "código": "AW-46"
     },
     {
     "imagen":"img/Productos/Tanques/Hidraulico.png",
     "nombre": "Hidráulico",
-    "código": "002"
+    "código": "AW-68"
     },
     {
     "imagen":"img/Productos/Tanques/Hidraulico.png",
     "nombre": "Hidráulico",
-    "código": "003"
+    "código": "AW-100"
     },
     {
     "imagen":"img/Productos/Tanques/Hidraulico.png",
     "nombre": "Hidráulico",
-    "código": "004"
+    "código": "AW-150"
     },
     {
     "imagen":"img/Productos/Tanques/15W40.png",
     "nombre": "SAE CI-4/SL",
-    "código": "005"
+    "código": "15W-40"
     },
     {
     "imagen":"img/Productos/Tanques/SAE-40.png",
     "nombre": "SAE 40 CF/SL",
-    "código": "006"
+    "código": ""
     },
     {
     "imagen":"img/Productos/Tanques/Transmision.png",
     "nombre": "Transmisión",
-    "código": "007"
+    "código": "SAE90"
     },
     {
     "imagen":"img/Productos/Tanques/Transmision.png",
     "nombre": "Transmisión",
-    "código": "008"
+    "código": "SAE140"
     },
     {
     "imagen":"img/Productos/Tanques/Transmision.png",
     "nombre": "Transmisión",
-    "código": "009"
+    "código": "SAE250"
     },
     {
     "imagen":"img/Productos/Tanques/25W60.png",
     "nombre": "SAE CF",
-    "código": "010"
+    "código": "25W-60"
     }
     ]
 }

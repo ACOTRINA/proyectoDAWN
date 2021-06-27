@@ -17,7 +17,7 @@ const cargarProductos=()=>{
             <div class="caja" id=${i}>
             <img class="img_producto" src=${producto.imagen} class"imagenes">
             <div class="informacion_prod">
-                <h3 class="titulos_prod">${producto.nombre}</h3>
+                <h3 class="nombres_prod">${producto.nombre}</h3>
                 <small class="codigo_prod">${producto.código}</small>
             </div>
             </div>`;
