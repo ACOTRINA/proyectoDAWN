@@ -143,6 +143,19 @@ p, h2, h3, h4, h5{
   }
 }
 
+.movil-version{
+  display: none;
+
+}@media screen and (max-width: 700px) {
+  .web-version{
+    display: none;
+  }
+  .movil-version{
+    display: block;
+  }
+
+}
+
 .footer > img{
   width: 25%;
   margin-top: 3%;
@@ -153,8 +166,9 @@ p, h2, h3, h4, h5{
     height: 3rem;
     width: 5rem;
     padding-left: 0%;
+    margin-top: 1rem;
     margin-left: 0.45rem;
-    margin-right: 0.20rem;
+    margin-right: 0.40rem;
   }
 }
 
@@ -170,7 +184,12 @@ p, h2, h3, h4, h5{
 
 }@media screen and (max-width: 700px) {
   .redesSociales {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .redesSociales > h5 {
+    font-size: 0.90rem;
+    text-align: center;
   }
   
 }

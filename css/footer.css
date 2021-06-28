@@ -19,6 +19,7 @@
       height: 3rem;
       width: 5rem;
       padding-left: 0%;
+      margin-top: 1rem;
       margin-left: 0.45rem;
       margin-right: 0.20rem;
     }
@@ -36,6 +37,11 @@
     .redesSociales {
       font-size: 1.5rem;
     }
+
+    .redesSociales > h5 {
+      font-size: 0.90rem;
+      text-align: center;
+    }
     
   }
   
@@ -49,6 +55,7 @@
       width: 1rem;
       margin:0.25rem;
       margin-left: 0.75rem;
+    
     }
     
   }  
@@ -64,4 +71,17 @@
   
   .contactenos{
     margin-top: 3%;
+  }
+
+  .movil-version{
+    display: none;
+  
+  }@media screen and (max-width: 700px) {
+    .web-version{
+      display: none;
+    }
+    .movil-version{
+      display: block;
+    }
+  
   }
