@@ -1,0 +1,39 @@
+#cont1,
+#cont2 {
+  margin: 50px 50px;
+}
+#cont1 {
+  background-color: aqua;
+}
+#cont2 {
+  background-color: brown;
+}
+.fecha {
+  width: auto;
+}
+
+.en {
+  position: absolute;
+  left: 79%;
+  width: 10rem;
+}
+
+.tel {
+  margin: -10px 0 0 0;
+}
+
+.cf {
+  background-color: dodgerblue;
+  margin-top: 40px;
+}
+
+.lugar {
+  background-color: fuchsia;
+}
+
+.correo {
+  background-color: gold;
+}
+.mensaje {
+  background-color: greenyellow;
+}
