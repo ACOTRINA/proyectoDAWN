@@ -23,29 +23,38 @@ p, h2, h3, h4, h5{
   
   
   div#main div{
-    margin-top: 60%;
-    margin-bottom: 60%;
+    margin-top: 20rem;
+    margin-bottom: 23rem;
     grid-area: sidebar;
     text-align: right; 
   
   }@media screen and (max-width: 700px) {
-    
   
+
     div#main div{
-      margin-top: 0%;
-      margin-bottom: 0%;
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: justify;
   
-      grid-area: main;
-      text-align: center;
+      /*grid-area: main;
+      text-align: center;*/
     }
   
     div#main div h3{
-      font-size: 1rem;
+      font-size: 0.75rem;
   
     }
   
     div#main div h2{
-      font-size: 0.75rem !important;
+      font-size: 1.5rem !important;
+    }
+
+    button{
+     width: 10rem;
+     height: 3rem;
+     font-size: 0.75rem;
+     text-align: center;
+
     }
   
   }
@@ -67,7 +76,14 @@ p, h2, h3, h4, h5{
     justify-content: center;
     background-image: url("/img/satisfaccionTransparencia.jpg");
     background-size: 100%; 
-    padding: 15%;   
+    padding: 15rem;   
+  }@media screen and (max-width: 700px) {
+
+    div#QuienesSomos{
+      display: none;
+    }
+
+
   }
   
   
@@ -148,8 +164,12 @@ p, h2, h3, h4, h5{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 9%;
+  padding-bottom: 9%;
+}@media screen and (max-width: 700px) {
+  #NuestroEquipo{
+    display: none;
+  }
 }
 
 /*#NuestroEquipo > div > div{
@@ -190,6 +210,7 @@ p, h2, h3, h4, h5{
 .trabajador p{
   text-align: center;
 }
+
 
 .imgTrabajadorAn{
   height: 50%;
