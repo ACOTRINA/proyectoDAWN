@@ -148,8 +148,8 @@ p, h2, h3, h4, h5{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-top: 20%;
-  padding-bottom: 20%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 /*#NuestroEquipo > div > div{
@@ -172,6 +172,10 @@ p, h2, h3, h4, h5{
   width: 1rem;
 }
 
+.trabajador > h4{
+  text-align: center;
+}
+
 .social-media-group{
   display: flex;
   justify-content: space-evenly;
@@ -180,11 +184,20 @@ p, h2, h3, h4, h5{
 
 
 .Cabecera{
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .trabajador p{
   text-align: center;
+}
+
+.imgTrabajadorAn{
+  height: 50%;
+  width: auto;
+
+}
+.imgTrabajadorAn > img{
+ border-radius: 100%;
 }
   
   /*hasta aqui trabajo yo: Ricardo Salazar, pueden usar las reglas de arriba \^^/, pero con cuidado que puedo cambiarlas en cualquier momento xD */
