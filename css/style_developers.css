@@ -62,7 +62,7 @@
     grid-column: 10px;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 750px) {
     /* For mobile phones: */
     .lista-developers{
         flex-direction: column;
@@ -177,12 +177,16 @@
     width: 400px;
     height: 300px;
     padding: 0;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin: 10px 50px;
     width: 200px;
+    transition: 1s;
 
 }
-@media all and (max-width: 600px) {
+.caja:hover{
+    transform: scale(1.2);
+}
+@media all and (max-width: 750px) {
     /* For mobile phones: */
     .btn-warning, .btn-info, .btn-success{
         /* display: grid; */
@@ -193,4 +197,4 @@
         margin-left: 0;
     }
     
-  }
+}
