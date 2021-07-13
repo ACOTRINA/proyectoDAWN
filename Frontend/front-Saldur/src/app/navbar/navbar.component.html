@@ -1,1 +1,69 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid" >
+      <a class="navbar-brand web-version" href="index.html">Lubricantes Saldur</a>
+      <a class="navbar-brand movil-version" href="index.html"><img src="/Frontend/front-Saldur/src/assets/iconos/isotipo.png" alt="Lubricantes Saldur" width="50rem" height="47rem"></a>
+      <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item" ngbDropdown>
+                <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+                  Menu
+                </a>
+                <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+                  <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+                  <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+                  <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+                </div>
+              </li>
+
+        </ul>
+
+      </div>
+      <form class="d-flex">
+        <input class="form-control me-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+</nav>
+      
+
+
+<!--<div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#QuienesSomos" ngbDropdownItem >Quiénes Somos</a>
+              <a class="dropdown-item" href="#NuestroEquipo" ngbDropdownItem>Nuestro Equipo</a>
+              <a class="dropdown-item" href="Productos.html" ngbDropdownItem>Productos</a>
+              <a class="dropdown-item" href="Noticias.html"ngbDropdownItem>Noticias</a>
+              <a class="dropdown-item" href="Developers.html" ngbDropdownItem>Developers</a>
+              <a class="dropdown-item" href="contactenos.html" ngbDropdownItem>Contáctenos</a>
+            </div>
+          </li>
+        </ul>
+      </div>-->
+
+<!--<div id="navbarColor01" class="d-flex" ngbDropdown #myDrop="ngbDropdown" >
+        <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" class="btn btn-outline-primary mr-2 nav-link dropdown-toggle" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Menu</button>
+        
+        <div ngbDropdownMenu aria-labelledby="dropdownManual">
+          <a class="dropdown-item" ngbDropdownItem>QuienesSomos</a>
+          <a class="dropdown-item" ngbDropdownItem>Nuestro Equipo</a>
+          <a class="dropdown-item" ngbDropdownItem>Productos</a>
+          <a class="dropdown-item" ngbDropdownItem>Noticias</a>
+          <a class="dropdown-item" ngbDropdownItem>Developers</a>
+          <a class="dropdown-item" ngbDropdownItem>Contáctenos</a>
+        </div>
+      </div>
+      
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      
+    </div>-->
+
