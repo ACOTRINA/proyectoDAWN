@@ -1,0 +1,297 @@
+p, h2, h3, h4, h5{
+    color: white;
+    letter-spacing: -0.80px;
+  }
+  
+  section{
+      display: block;
+      margin-top: 3.4rem;
+  }
+  div#main{
+      display: grid;
+      grid-template-columns: 25% 25% 30% 20%;
+      grid-template-rows: auto;
+      grid-template-areas: 
+      "header header header header"
+      ". main sidebar ."
+      "footer footer footer footer";
+      background-image: url("../../assets/img/carrito1Transparencia.jpg");
+      background-size: 100%; 
+  }@media screen and (max-width: 700px){
+
+    div#main{
+      display: flex;
+      flex-direction: column;
+      background-image: none;
+      background-color: #242424;
+    }
+
+  }
+  
+  
+  
+  
+  div#main div{
+    margin-top: 20rem;
+    margin-bottom: 23rem;
+    grid-area: sidebar;
+    text-align: right; 
+  
+  }@media screen and (max-width: 700px) {
+  
+
+    div#main div{
+      margin-top: 15rem;
+      margin-bottom: 15rem;
+      text-align: center;
+  
+      /*grid-area: main;
+      text-align: center;*/
+    }
+  
+    div#main div h3{
+      font-size: 0.75rem;
+  
+    }
+  
+    div#main div h2{
+      font-size: 1.5rem !important;
+    }
+
+    button{
+     width: 10rem;
+     height: 3rem;
+     font-size: 0.75rem;
+     text-align: center;
+
+    }
+  
+  }
+  
+  div#main div h2{
+    font-size: 3.5rem;
+  }
+  
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+  }
+  
+  
+  div#QuienesSomos{
+    display: flex;
+    justify-content: center;
+    background-image: url("../../assets/img/satisfaccionTransparencia.jpg");
+    background-size: 100%; 
+    padding: 15rem;   
+  }@media screen and (max-width: 700px) {
+
+    div#QuienesSomos{
+      display: flex;
+      flex-direction: column;
+      background-image: none;
+      background-color: #5e6770;
+      padding: 0;
+      font-size: 0.90rem;
+      margin: 1.5rem;
+      padding: 1rem;
+      text-align: left;
+
+    }
+
+
+  }
+  
+  
+  div#changes{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+  }
+  
+  div#QSomos p{
+    font-size: 17px;
+    text-align: justify;
+    
+  
+  }
+  
+  div#changes{
+    text-align: justify;
+  }
+  
+  .linkIndex{
+    font-size: 2rem !important;
+  
+  }
+  .linkMenu{
+    font-size: 1.5rem !important;
+  
+  }
+
+   
+.footer{
+  display: flex;
+  justify-content: space-between;
+  background: #3A3F44;
+
+}@media screen and (max-width: 700px) {
+  .footer{
+    font-size: 0.60rem ;
+  }
+}
+
+.movil-version{
+  display: none;
+
+}@media screen and (max-width: 700px) {
+  .web-version{
+    display: none;
+  }
+  .movil-version{
+    display: block;
+  }
+
+}
+
+.footer > img{
+  width: 25%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  padding-left: 2rem;
+}@media screen and (max-width: 700px) {
+  .footer > img{
+    height: 3rem;
+    width: 5rem;
+    padding-left: 0%;
+    margin-top: 1rem;
+    margin-left: 0.45rem;
+    margin-right: 0.40rem;
+  }
+}
+
+
+
+.redesSociales{
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  justify-content: center;
+  margin-top: 2%;
+  padding-right: 1rem;
+
+}@media screen and (max-width: 700px) {
+  .redesSociales {
+    font-size: 1rem;
+  }
+
+  .redesSociales > h5 {
+    font-size: 0.90rem;
+    text-align: center;
+  }
+  
+}
+
+
+.redesSociales > div >img{
+  width: 1.5rem;
+  margin: 7%;
+
+}@media screen and (max-width: 700px) {
+  .redesSociales > div > img{
+    width: 1rem;
+    margin:0.25rem;
+    margin-left: 0.75rem;
+  }
+  
+}
+
+.redesSociales > div > .fb-icon{
+  width: 0.7rem;
+
+}
+
+.redesSociales > div > h5 {
+  font-size: 0.9em;
+}
+
+.contactenos{
+  margin-top: 3%;
+}
+
+#NuestroEquipo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 9%;
+  padding-bottom: 9%;
+}@media screen and (max-width: 700px) {
+  .Equipo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  .trabajador{
+    margin-top: 3rem;
+  }@media screen and (max-width: 700px) {
+    .trabajador{
+      height: auto;
+    }
+  }
+  
+}
+
+/*#NuestroEquipo > div > div{
+  display: flex;
+  justify-content: space-evenly;
+}*/
+
+#NuestroEquipo div{
+  display: flex;
+  justify-content: space-around;
+}
+
+.trabajador{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trabajador > img{
+  width: 1rem;
+}
+
+.trabajador > h4{
+  text-align: center;
+}
+
+.social-media-group{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+.Cabecera{
+  margin-bottom: 5rem;
+}
+
+.trabajador p{
+  text-align: center;
+}
+
+
+.imgTrabajadorAn{
+  height: auto;
+  width: auto;
+
+}
+.imgTrabajadorAn > img{
+ border-radius: 100%;
+ width: 7rem;
+ height: 7rem;
+}
