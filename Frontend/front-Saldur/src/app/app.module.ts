@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent } from './index/index.component';
+import { ProductosComponent } from './productos/productos.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { IndexComponent } from './index/index.component';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    IndexComponent
+    IndexComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
