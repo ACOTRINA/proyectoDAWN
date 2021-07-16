@@ -100,11 +100,8 @@
   padding: 10px;
 }
 
-/* html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-} */
+/* MAPA
+*/
 #map{
     height: 400px;
     width: 300px;
