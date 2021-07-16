@@ -1,35 +1,35 @@
-.container {
+.container{
   display: grid;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(3,auto);
+
 }
-.row {
+.row{
   display: grid;
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2,auto);
   border: 1px blue solid;
 }
-#contactenos-info {
+#contactenos-info{
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2,auto);
   border: 1px red solid;
 }
 
-#cont1,
-#cont2,
-#cont3 {
+#cont1, #cont2, #cont3 {
   /* margin: 50px 50px; */
   width: 100%;
   height: 100%;
+  
 }
 #cont1 {
   /* background-color: aqua; */
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(4,auto);
   border: 1px white solid;
 }
 #cont4 {
   /* background-color: brown; */
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(4,auto);
   border: 1px yellow solid;
   width: 100%;
   height: 100%;
@@ -45,29 +45,29 @@
   width: 10rem; */
   padding: 0px 30px 0px;
 }
-.titulomap {
+.titulomap{
   border: 1px green solid;
 }
 .tel {
   /* margin: -10px 0 0 0; */
   padding: 5px 30px 20px;
 }
-.dire {
+.dire{
   display: grid;
-  grid-template-rows: repeat(2, auto);
-  border: 1px green solid;
+  border: 1px red solid;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
+
 }
 
 .cf {
   /* background-color: dodgerblue; */
   /* margin-top: 40px; */
   display: grid;
-  grid-template-rows: repeat(2, auto);
-  border: 1px green solid;
+  grid-template-rows: repeat(2,auto);
+  border: 1px blue solid;
   padding: 40px 30px 0px 30px;
 }
 /* .col-sm-2{
@@ -77,25 +77,50 @@
 .lugar {
   /* background-color: fuchsia; */
   display: grid;
-  grid-template-rows: repeat(2, auto);
-  border: 1px green solid;
-  padding: 0px 30px 0px 30px;
+  grid-template-rows: repeat(2,auto);
+  border: 1px white solid;
+  padding: 0px 10px 0px 10px;
 }
 
 .correo {
   /* background-color: gold; */
   display: grid;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(3,auto);
   border: 1px green solid;
   padding: 0px 30px 0px;
 }
 .mensaje {
   /* background-color: greenyellow; */
   display: grid;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(2,auto);
   border: 1px green solid;
   padding: 5px 30px 20px;
 }
-.form-control {
+.form-control{
   padding: 10px;
+}
+
+/* html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+} */
+#map{
+    height: 400px;
+    width: 300px;
+}
+.custom-map-control-button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 400px;
+  cursor: pointer;
+}
+.custom-map-control-button:hover {
+  background: #ebebeb;
 }
