@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.getElementById('buscador2').onclick = function(){
-    buscador1();  
+    buscador1();
+      
 };
 
 
@@ -36,9 +37,6 @@ function buscador1(){
             let altimg = imagen.getAttribute('alt');
             let atImg =  imagen.getAttribute('src');
             
-
-
-            //console.log(n);
             
 
             html += `
@@ -66,6 +64,7 @@ function buscador1(){
 
     }
     document.getElementById('item-container').innerHTML = html;
+    document.getElementsByTagName('input')[1].value = "";
 
 
 }

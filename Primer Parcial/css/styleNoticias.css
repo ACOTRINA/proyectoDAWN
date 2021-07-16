@@ -70,3 +70,8 @@ i {
 
     
 }
+
+
+#searcher{
+  display: flex;
+}
