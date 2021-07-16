@@ -110,7 +110,6 @@
   padding: 10px;
 }
 .dropdown-menuProv{
-  height:150px;
   width: 480px;
   overflow-y:auto;
 }
@@ -131,11 +130,27 @@
   
 }
 
-@media (max-width: 500px) {
-  .dropdownCiudad{
-        height:200px;
+@media all and (max-width: 650px) {
+  .dropdown-menuProv{
         overflow-y:auto;
+        width: 400px;
+
      }
+     .container{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      
+    }
+     .row{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    input{
+      width: 400px;
+    }
+
 }
 
 /* MAPA
@@ -158,18 +173,4 @@
 }
 .custom-map-control-button:hover {
   background: #ebebeb;
-}
-
-
-.movil-version{
-  display: none;
-
-}@media screen and (max-width: 700px) {
-  .web-version{
-    display: none;
-  }
-  .movil-version{
-    display: block;
-  }
-
 }
