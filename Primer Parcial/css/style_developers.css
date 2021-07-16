@@ -224,3 +224,16 @@
     width: 7rem;
     height: 7rem;
 }
+
+.movil-version{
+    display: none;
+  
+  }@media screen and (max-width: 700px) {
+    .web-version{
+      display: none;
+    }
+    .movil-version{
+      display: block;
+    }
+  
+  }
