@@ -47,8 +47,8 @@
             </li>
             </ul>
             <form class="d-flex">
-            <input class="form-control me-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            <input id="Tbuscador" class="form-control me-sm-2 " type="text" placeholder="Search">
+            <button id="Bbuscador" class="btn btn-secondary my-2 my-sm-0" >Search</button>
             </form>
         </div>
         </div>
@@ -61,12 +61,17 @@
   <div class="contenedor ">
     <h1 class="titulo_noticias">NOTICIAS</h1>
 
+    <div>
+      <input id="buscador1" class="form-control me-sm-2 " type="text" placeholder="Search">
+      <button id="buscador2" class="btn btn-secondary my-2 my-sm-0" >Search</button>
+    </div>
+
 
     <i class="fa fa-chevron-left prev"></i>
     <i class="fa fa-chevron-right next"></i>
 
 
-    <div class="for_slick_slider ">
+    <div id="item-container" class="for_slick_slider "><!---->
     
   
     <div class="items">
@@ -77,7 +82,7 @@
           </div>
 
           <div class="informacion">
-            <p>La importancia del aceite en el motor de los autos</p>
+            <p class="titulo">La importancia del aceite en el motor de los autos</p>
           </div>
           <img src="../img/noticia/noticia1img.PNG" alt="noticia1">
           <div class="informacion">
@@ -95,7 +100,7 @@
             <h3>Novedades</h3>
           </div>
           <div class="informacion">
-            <p>¿Cómo realizar un cambio de manera adecuada?</p>
+            <p class="titulo">¿Cómo realizar un cambio de manera adecuada?</p>
           </div>
           <img src="../img/noticia/noticia2img.PNG" alt="noticia2">
           <div class="informacion">
@@ -114,7 +119,7 @@
             <h3>Jueves de mecánica</h3>
           </div>
           <div class="informacion">
-            <p>¿Existe el talón de aquiles?</p>
+            <p class="titulo">¿Existe el talón de aquiles?</p>
           </div>
           <img src="../img/noticia/noticia3img.PNG" alt="noticia3">
           <div class="informacion">
@@ -131,7 +136,7 @@
             <h3>Novedades</h3>
           </div>
           <div class="informacion">
-            <p>13 cosas que debes saber sobre el aceite de motor</p>
+            <p class='titulo'>13 cosas que debes saber sobre el aceite de motor</p>
           </div>
           <img src="../img/noticia/noticia4img.PNG" alt="noticia4">
           <div class="informacion">
@@ -149,7 +154,7 @@
             <h3>Tips & Consejos</h3>
           </div>
           <div class="informacion">
-            <p>¿Qué hacer para alargar la vida del motor?</p>
+            <p class="titulo">¿Qué hacer para alargar la vida del motor?</p>
           </div>
           <img src="../img/noticia/noticia5img.PNG" alt="noticia5">
           <div class="informacion">
@@ -167,7 +172,7 @@
             <h3>Novedades</h3>
           </div>
           <div class="informacion">
-            <p>¿Qué cosas debes saber acerca del aceite de motor?</p>
+            <p class="titulo">¿Qué cosas debes saber acerca del aceite de motor?</p>
           </div>
           <img src="../img/noticia/noticia6img.PNG" alt="noticia6">
           <div class="informacion">
@@ -211,7 +216,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script src="js/mapa.js"></script>
+    <script src="/js/mapa.js"></script>
+    <script src="/js/buscador.js"></script>
 
 
     <script src="https://kit.fontawesome.com/9f26191287.js" crossorigin="anonymous"></script>
