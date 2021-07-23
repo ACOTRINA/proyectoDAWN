@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent } from './index/index.component';
 import { ProductosComponent } from './productos/productos.component';
 import { NoticiasComponent } from './noticias/noticias.component';
+import { DevelopersComponent } from './developers/developers.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NoticiasComponent } from './noticias/noticias.component';
     FooterComponent,
     IndexComponent,
     ProductosComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    DevelopersComponent
   ],
   imports: [
     BrowserModule,

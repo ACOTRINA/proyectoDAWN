@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.titulo_developers{
+    color: white;
+    padding: 75px 0 0 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-developers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.developer{
+    flex-basis: 25%;
+    padding: 50px;
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(3,auto);
+}
+
+.informacion{
+    padding-top:5%;
+}
+
+.usuario{
+    max-width: 100%;
+    width: 40%;
+    display: block;
+    margin: auto;
+
+}
+.descripcion{
+    text-align: justify;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+.enlaces{
+    /* border: 1px solid red; */
+    height: 0px;
+}
+.twitter{
+    width: 30px;
+    height: 30px;
+}
+.linkedin{
+    width: 30px;
+    height: 30px;
+}
+.redes{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    width: 230px;
+    height: 40px;
+    /* border: 1px solid blue; */
+    grid-column: 10px;
+}
+
+@media all and (max-width: 750px) {
+    /* For mobile phones: */
+    .lista-developers{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .redes{
+        grid-template-rows: repeat(3, auto);
+    }
+    #barra-menu>div{
+        grid-template-rows: repeat(2,auto);
+        margin-top: 0;
+        /* display: block; */
+    }
+}
+
+.user1{
+    border-radius: 100%;
+    width: 10rem;
+    height: 10rem;
+}
+
+
+
