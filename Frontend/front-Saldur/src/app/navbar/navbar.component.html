@@ -16,7 +16,7 @@
                   <a routerLink="/index" fragment="QuienesSomos" ngbDropdownItem href="#" (click)="$event.preventDefault()">Quienes Somos</a>
                   <a routerLink="index" fragment="NuestroEquipo" ngbDropdownItem href="#" (click)="$event.preventDefault()">Nuestro Equipo</a>
                   <a routerLink="/productos" ngbDropdownItem href="#" (click)="$event.preventDefault()">Productos</a>
-                  <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Noticias</a>
+                  <a routerLink="/noticias" ngbDropdownItem href="#" (click)="$event.preventDefault()">Noticias</a>
                   <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Developers</a>
                   <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Contáctenos</a>
                 </div>
@@ -27,7 +27,7 @@
       </div>
       <form class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        <button id="busqueda" class="btn btn-secondary my-2 my-sm-0">Search</button>
       </form>
     </div>
 </nav>

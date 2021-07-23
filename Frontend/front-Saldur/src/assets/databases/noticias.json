@@ -1,0 +1,20 @@
+{
+    "noticias": [
+
+        {
+            "header":"Novedades",
+            "titulo":"La importancia del aceite en el motor de los autos",
+            "imagen":"assets/img/noticia1img.PNG",
+            "descripcion":"Explicamos por qué es tan vital elegir bien el lubricante y cambiarlo en los intervalos establecidos"
+        },
+        {
+            "header":"Novedades",
+            "titulo":"¿Cómo realizar un cambio de manera adecuada?",
+            "imagen":"assets/img/noticia2img.PNG",
+            "descripcion":"Una de las cosas más importantes para mantener al motor, y es más fácil de lo que aparenta"
+
+
+        }
+
+    ]
+}

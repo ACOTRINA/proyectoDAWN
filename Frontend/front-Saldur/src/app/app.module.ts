@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent } from './index/index.component';
 import { ProductosComponent } from './productos/productos.component';
+import { NoticiasComponent } from './noticias/noticias.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ProductosComponent } from './productos/productos.component';
     NavbarComponent,
     FooterComponent,
     IndexComponent,
-    ProductosComponent
+    ProductosComponent,
+    NoticiasComponent
   ],
   imports: [
     BrowserModule,

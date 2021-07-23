@@ -1,0 +1,13 @@
+.card{
+    width: 18rem;
+    text-align: center;
+}
+
+.container{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 27rem;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+}
+
+
