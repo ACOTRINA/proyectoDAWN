@@ -11,6 +11,10 @@ import { IndexComponent } from './index/index.component';
 import { ProductosComponent } from './productos/productos.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { DevelopersComponent } from './developers/developers.component';
+import { ContactenosComponent } from './contactenos/contactenos.component';
+import { Parte1Component } from './contactenos/parte1/parte1.component';
+import { Parte2Component } from './contactenos/parte2/parte2.component';
+
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { DevelopersComponent } from './developers/developers.component';
     IndexComponent,
     ProductosComponent,
     NoticiasComponent,
-    DevelopersComponent
+    DevelopersComponent,
+    ContactenosComponent,
+    Parte1Component,
+    Parte2Component,
+
   ],
   imports: [
     BrowserModule,

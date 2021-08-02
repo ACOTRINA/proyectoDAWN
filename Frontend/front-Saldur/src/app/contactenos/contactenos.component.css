@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+}
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  width: 100%;
+  height: 100%;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  align-content: center;
+}
+/* #contactenos-info{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  border: 1px red solid;
+} */
+
+#cont1,
+#cont2,
+#cont3 {
+  /* margin: 50px 50px; */
+  width: 100%;
+  height: 100%;
+}
+#cont1 {
+  /* background-color: aqua; */
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+}
+#cont4 {
+  /* background-color: brown; */
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  width: 100%;
+  height: 100%;
+}
+.fecha {
+  width: auto;
+  padding: 0px 0px 0px;
+}
+
+.nom {
+  /* position: absolute;
+  left: 79%;
+  width: 10rem; */
+  padding: 0px 30px 0px 30px;
+}
+.dir1 {
+  padding: 0px 30px 0px;
+}
+#dropProv {
+  margin-bottom: 30px;
+}
+.titulomap {
+  border: 1px green solid;
+  padding: 0px 30px 0px 30px;
+}
+.tel {
+  /* margin: -10px 0 0 0; */
+  padding: 0px 30px 25px 30px;
+}
+.dire {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.cf {
+  /* background-color: dodgerblue; */
+  /* margin-top: 40px; */
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  padding: 0px 30px 0px;
+}
+/* .col-sm-2{
+  padding: 30px;
+} */
+
+.lugar {
+  /* background-color: fuchsia; */
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  padding: 0px 30px 0px;
+  /* padding: 0px 10px 0px 10px; */
+}
+
+.correo {
+  /* background-color: gold; */
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  padding: 0px 30px 0px;
+}
+.mensaje {
+  /* background-color: greenyellow; */
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  padding: 5px 30px 20px;
+}
+.form-control {
+  padding: 10px;
+}
+.dropdown-menuProv {
+  width: 480px;
+  overflow-y: auto;
+}
+
+.enviado {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.enviadobtn {
+  width: 15%;
+  height: 90%;
+}
+
+@media all and (max-width: 650px) {
+  .dropdown-menuProv {
+    overflow-y: auto;
+    width: 400px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  input {
+    width: 400px;
+  }
+}
+
+/* MAPA
+*/
+#map {
+  height: 300px;
+  width: 200px;
+}
+.custom-map-control-button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 400px;
+  cursor: pointer;
+}
+.custom-map-control-button:hover {
+  background: #ebebeb;
+}
