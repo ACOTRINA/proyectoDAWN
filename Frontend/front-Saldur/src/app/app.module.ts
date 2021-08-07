@@ -14,6 +14,8 @@ import { DevelopersComponent } from './developers/developers.component';
 import { ContactenosComponent } from './contactenos/contactenos.component';
 import { Parte1Component } from './contactenos/parte1/parte1.component';
 import { Parte2Component } from './contactenos/parte2/parte2.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -29,6 +31,8 @@ import { Parte2Component } from './contactenos/parte2/parte2.component';
     ContactenosComponent,
     Parte1Component,
     Parte2Component,
+    LoginComponent,
+    SignupComponent,
 
   ],
   imports: [

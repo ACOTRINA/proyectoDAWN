@@ -7,6 +7,8 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { ProductosComponent } from './productos/productos.component';
 import { DevelopersComponent } from './developers/developers.component';
 import { ContactenosComponent } from './contactenos/contactenos.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {path:'index', component:IndexComponent },
@@ -14,7 +16,10 @@ const routes: Routes = [
   {path:'', redirectTo:'/index', pathMatch:'full'},
   {path:'noticias', component: NoticiasComponent},
   {path: 'developers', component: DevelopersComponent},
-  {path: 'contactenos', component: ContactenosComponent}
+  {path: 'contactenos', component: ContactenosComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'signup', component: SignupComponent}
+
 ];
 
 @NgModule({
