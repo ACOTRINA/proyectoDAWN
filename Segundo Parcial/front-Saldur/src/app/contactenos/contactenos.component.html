@@ -2,20 +2,26 @@
 <br>
 <br>
 <section>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm" id="cont1">
-                <app-parte1></app-parte1>
-            </div>
-            <div class="col-sm" id="cont2">
-                <app-parte2></app-parte2>
-            </div>
-        </div>
-        <div class="enviado">
-            <button  type="submit" class="btn btn-primary en enviadobtn">Enviar</button>
-        </div>
+    <div class="login-box">
+        <h2>Contactenos</h2>
+        <form  (ngSubmit)='enviar(form.value) ' #form="ngForm">
+            <br>
+            <h3>Verificacion: {{form.valid}}</h3>
+            <!-- Nombres -->
+            <input type="text" placeholder="Nombre completo" name="nombre" [(ngModel)]='validacion.nombre' required >
+            <!-- Coreo -->
+            <input type="text" placeholder="Correo" name='email'[(ngModel)]="validacion.correo" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+            <!-- fecha -->
+            <input type="text" placeholder="Fecha de nacimiento" name="fecha" [(ngModel)]='validacion.fecha' require>
+            <!-- Telefono -->
+            <input type="text" placeholder="Telefono" name="telefono" [(ngModel)]='validacion.telefono' require>
+            <!-- Lugar de origen -->
+            <input type="text" placeholder="Lugar de origen" name="lugar" [(ngModel)]='validacion.lugar' require>
+            <!-- Mensaje -->
+            <input type="text" placeholder="Mensaje..." id="mensaje" name="mensaje" [(ngModel)]='validacion.mensaje'>
+            <input type="submit" value="Enviar" id="boton" [disabled]='form.invalid'>
+        </form>
     </div>
-    
-
-
+    <br>
 </section>
+
