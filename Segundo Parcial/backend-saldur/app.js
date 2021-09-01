@@ -6,10 +6,13 @@ var logger = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const configMensaje = require('./controllers/configMensaje')
+const multipart = require('connect-multiparty'); 
 //...................................................
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var productosRouter = require("./routes/productos");
+var listasRouter = require("./routes/listas");
 
 var app = express();
 
@@ -31,5 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use("/productos", productosRouter);
+app.use("/listas", listasRouter);
 
 module.exports = app;
