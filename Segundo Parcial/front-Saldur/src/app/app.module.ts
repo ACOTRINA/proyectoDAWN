@@ -16,6 +16,8 @@ import { ContactenosComponent } from './contactenos/contactenos.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { MessageService } from './services/message.service';
+import { GraficasComponent } from './graficas/graficas.component';
+import { GraficasService } from './services/graficas.service';
 
 
 
@@ -31,6 +33,7 @@ import { MessageService } from './services/message.service';
     ContactenosComponent,
     LoginComponent,
     SignupComponent,
+    GraficasComponent,
 
   ],
   imports: [
@@ -40,7 +43,7 @@ import { MessageService } from './services/message.service';
     NgbModule,
     HttpClientModule
   ],
-  providers: [MessageService],
+  providers: [MessageService,GraficasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
