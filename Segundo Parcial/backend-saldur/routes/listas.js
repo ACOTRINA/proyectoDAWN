@@ -1,13 +1,15 @@
 var express = require('express');
 var router = express.Router();
-const multipart = require('connect-multiparty');  
+//const multipart = require('connect-multiparty');  
 var fs = require('fs');
-const sequelize = require("sequelize");
+//const sequelize = require("sequelize");
 const lista = require('../models').lista_producto;
+const usuario = require('../models').usuario;
 
 router.get('/', function(req, res, next) {
+    
     lista.findAll({
-         
+        include: [{ model: usuario }],
       })
       .then(listas => {
           res.send(listas)
@@ -18,32 +20,15 @@ router.get('/', function(req, res, next) {
 router.post("/", function(req, res, next) {
     let nombre1= req.body.nombre;
 
-    /*let reader = new FileReader();
-    //let cantidad= req.body.cantidad;
-    var blob1 = new Blob([new Uint8Array(req.body.imagen)]); 
-    const imageUrl = URL.createObjectURL(blob1);  
-    console.log(imageUrl);//blob:http://localhost:8100/c489.etc  
-    reader.readAsDataURL(new Blob([new Uint8Array(i.imagen.data)])); 
-    reader.onloadend = function() {
-        base64data = reader.result;     
-    }
-    this.myFunction(base64data)*/
 
-    
-    //{ force: true }
     (async()=>{
-        //await sequelize.sync();        
         const listas = await lista.create({
             nombre: nombre1,
+            usuarioId: 5,
             createdAt: new Date(),
             updatedAt: new Date()
         })
-        //.then(image =>{
-            //fs.writeFileSync(__dirname + '/static/assets/tmp/tmp-jsa-header.png', image.data);		
 
-        //})
-
-        //await usuario.save();
         res.redirect('http://localhost:4200/listas')
 })();
 

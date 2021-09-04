@@ -11,16 +11,18 @@ router.get('/', function(req, res, next) {
 router.post('/save', function(req, res, next){
   let name = req.body.nombre;
   let lastName = req.body.apellido;
-  let usuario = req.body.usuario;
+  let correo = req.body.correo;
+  let password =  req.body.password;
+
   
 
   //console.log(name);
 
-  
-  user.create({ nombre: name, apellido: lastName, fechaNacimiento: fech})
-  .then(function(){
-    res.redirect('http://localhost:4200/clientes')
-  })
+  (async()=>{
+    const listas = await user.create({ nombre: name, apellido: lastName, fechaNacimiento: new Date(), pais: "Ecuador", ciudad: "Seleccione una", teléfono: "Ingrese teléfono", correo: correo, contrasenia: password, rolId: 1 })
+
+    res.redirect('http://localhost:4200/')
+})();
 
 });
 
