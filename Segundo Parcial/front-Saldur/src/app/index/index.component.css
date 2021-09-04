@@ -295,3 +295,9 @@ p, h2, h3, h4, h5{
  width: 7rem;
  height: 7rem;
 }
+
+div#botns{
+  margin: none;
+  padding: 0%;
+
+}

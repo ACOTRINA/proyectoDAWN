@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+//import * as introJs from 'intro.js';
+
 
 @Component({
   selector: 'app-index',
@@ -11,6 +13,10 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
    
+  }
+
+  play(): void{
+    //introJs().start();
   }
 
 }
