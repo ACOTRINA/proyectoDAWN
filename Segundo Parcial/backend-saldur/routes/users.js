@@ -3,10 +3,8 @@ var router = express.Router();
 const sequelize = require('../models/index.js').sequelize;
 const user = require('../models').usuario;
 
-let bd = {
-  'usuario': 'abc@example.com',
-  'contrasenia': '123'
-  }
+var bd = '';
+  
 
   router.get('/listausuarios', function(req, res, next){
     user.findAll({
@@ -20,7 +18,8 @@ let bd = {
   });
   
   var auth = function(req, res, next) {
-     if (req.session && req.session.usuario === bd['usuario'])
+    console.log(bd)
+     if (req.session && req.session.usuario === bd)
        return next();
      else
        return res.sendStatus(401);
@@ -30,6 +29,10 @@ let bd = {
 router.get('/', auth, function(req, res, next) {
   res.redirect("http://localhost:4200/user");
 });
+
+router.get('/admin', auth, function(req, res, next){
+  res.redirect("http://localhost:4200/admin");
+})
 
 router.post('/save', function(req, res, next){
   let name = req.body.nombre;
@@ -48,19 +51,40 @@ router.post('/save', function(req, res, next){
 
 
 router.post('/validate', function(req, res, next) {
+  bd = req.body.user;
+  user.findAll({
+    attributes: { exclude: [ "updatedAt"] }
+  })
+  .then(usuarios => {
+
+  let contraseniabd;
   let usuario = req.body.user;
   let contrasenia = req.body.password;
+  let rol = '';
+    for(let usuario1 of usuarios){
+      if(usuario1['correo'] == usuario){
+        contraseniabd = usuario1['contrasenia'];
+        rol = usuario1['rolId']
 
-  //Validación
-  if(usuario == bd['usuario'] && contrasenia == bd['contrasenia']) {
-    //res.cookie('usuario', usuario, {expire: new Date() + 9999});
-    req.session.usuario = usuario;
-    res.redirect('/users');
-  } else {
-    //res.cookie('usuario', '', {expires: new Date(0)});
-    req.session = null;
-    res.redirect('http://localhost:4200/login')
-  }
+      }
+    }
+
+   //Validación
+    if(contraseniabd == contrasenia && rol == '1') {
+      //res.cookie('usuario', usuario, {expire: new Date() + 9999});
+      req.session.usuario = usuario;
+      res.redirect('/users');
+    }else if(contraseniabd == contrasenia && rol == '2') {
+      req.session.usuario = usuario;
+      res.redirect('/users/admin');
+
+    }else {
+      //res.cookie('usuario', '', {expires: new Date(0)});
+      req.session = null;
+      res.redirect('http://localhost:4200/login')
+    }
+  })
+  .catch(error => res.status(400).send(error))
 
 });
 
