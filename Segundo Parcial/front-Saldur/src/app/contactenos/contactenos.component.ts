@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MessageService } from '../services/message.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-contactenos',
@@ -8,7 +9,10 @@ import { MessageService } from '../services/message.service';
 })
 export class ContactenosComponent {
 
-  constructor(public msg:MessageService) { }
+  constructor(public msg:MessageService, app: AppComponent) {
+    app.showNav = false;
+    app.showFoot = false; 
+  }
   validacion ={
     nombre:'',
     correo:'',

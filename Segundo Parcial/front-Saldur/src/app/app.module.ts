@@ -1,6 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCardModule} from '@angular/material/card';
+import {MatBadgeModule} from '@angular/material/badge';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +28,11 @@ import { SignupComponent } from './signup/signup.component';
 import { MessageService } from './services/message.service';
 import { GraficasComponent } from './graficas/graficas.component';
 import { GraficasService } from './services/graficas.service';
+import { ClienteComponent } from './usersModules/cliente/cliente.component';
+import { AdministratorComponent } from './usersModules/administrator/administrator.component';
+import { PerfilComponent } from './usersModules/cliente/perfil/perfil.component';
+
+
 
 
 
@@ -34,6 +49,11 @@ import { GraficasService } from './services/graficas.service';
     LoginComponent,
     SignupComponent,
     GraficasComponent,
+    ClienteComponent,
+    AdministratorComponent,
+    PerfilComponent,
+    
+
 
   ],
   imports: [
@@ -41,7 +61,17 @@ import { GraficasService } from './services/graficas.service';
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatCardModule,
+    MatBadgeModule
   ],
   providers: [MessageService,GraficasService],
   bootstrap: [AppComponent]

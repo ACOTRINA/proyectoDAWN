@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { AppComponent } from '../app.component'
 
 @Component({
   selector: 'app-noticias',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoticiasComponent implements OnInit {
 
-  constructor() { }
+  constructor(app:AppComponent) {
+    app.showNav = false;
+    app.showFoot = false; 
+   }
 
   ngOnInit(): void {
   }

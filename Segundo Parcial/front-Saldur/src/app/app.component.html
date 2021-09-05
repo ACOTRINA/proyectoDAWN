@@ -3,7 +3,7 @@
   <head></head>
   <body>
     <header>
-      <app-navbar></app-navbar>
+      <app-navbar *ngIf='!showNav'></app-navbar>
     </header>
     <main>
       <router-outlet></router-outlet>
@@ -12,7 +12,7 @@
     </main>
 
     <footer>
-      <app-footer></app-footer>
+      <app-footer *ngIf='!showFoot'></app-footer>
     </footer>
     
   </body>

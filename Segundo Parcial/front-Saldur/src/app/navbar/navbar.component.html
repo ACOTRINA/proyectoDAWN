@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" *ngIf ='!showNav'>
     <div class="container-fluid" >
       <a class="navbar-brand web-version" routerLink="/index">Lubricantes Saldur</a>
       <a class="navbar-brand movil-version" routerLink="/index"><img src="assets/img/iconos/isotipo.png" alt="Lubricantes Saldur" width="50rem" height="47rem"></a>
@@ -24,11 +24,13 @@
 
         </ul>
 
+        <form class="d-flex">
+          <button routerLink="/login" id="busqueda" class="btn btn-secondary my-2 my-sm-0">Login</button>
+          <button routerLink="/signup" id="busqueda" class="btn btn-secondary my-2 my-sm-0">Sign up</button>
+        </form>
+
       </div>
-      <form class="d-flex">
-        <button routerLink="/login" id="busqueda" class="btn btn-secondary my-2 my-sm-0">Login</button>
-        <button routerLink="/signup" id="busqueda" class="btn btn-secondary my-2 my-sm-0">Sign up</button>
-      </form>
+      
     </div>
 </nav>
       

@@ -10,6 +10,9 @@ import { ContactenosComponent } from './contactenos/contactenos.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { GraficasComponent } from './graficas/graficas.component';
+import { AdministratorComponent } from './usersModules/administrator/administrator.component';
+import { ClienteComponent } from './usersModules/cliente/cliente.component';
+//import { PerfilComponent } from './usersModules/cliente/perfil/perfil.component';
 
 
 const routes: Routes = [
@@ -21,7 +24,11 @@ const routes: Routes = [
   {path: 'contactenos', component: ContactenosComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
-  {path: 'grafica', component: GraficasComponent}
+  {path: 'grafica', component: GraficasComponent},
+  {path: 'admin', component: AdministratorComponent},
+  {path: 'user', component: ClienteComponent},
+  //{path:'user/perfil', component:PerfilComponent}
+
 
 ];
 
