@@ -9,6 +9,10 @@ const configMensaje = require('./controllers/configMensaje')
 const multipart = require('connect-multiparty'); 
 //...................................................
 
+//componentes sesiones
+var cookieSession = require('cookie-session');
+//...................................................
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productosRouter = require("./routes/productos");
@@ -19,12 +23,20 @@ var app = express();
 //Correo
 app.use(bodyParser.json());
 app.use(cors())
-
 app.post('/formulario', (req, res) => {
     configMensaje(req.body);
     res.status(200).send();
 })
 //...................................
+
+//sesion
+app.use(cookieSession({
+    name: 'session',
+    keys: ['DAWM'],
+    
+    // Cookie Options
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    }))
 
 app.use(logger('dev'));
 app.use(express.json());

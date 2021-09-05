@@ -3,13 +3,13 @@
     <div class="login-box">
     <img src="assets/img/DashBoard/admin.jfif" class="avatar" alt="Avatar Image">
     <h1>Iniciar Sesion</h1>
-    <form>
+    <form ngNoForm action="http://localhost:3001/users/validate" method="POST">
         <!-- USERNAME INPUT -->
-        <label for="username">Usuario</label>
-        <input type="text" placeholder="Ingrese su usuario">
+        <label for="username">e-mail</label>
+        <input id="user" name="user" type="text" placeholder="ingrese el correo">
         <!-- PASSWORD INPUT -->
         <label for="password">Contraseña</label>
-        <input type="password" placeholder="Ingrese su contraseña">
+        <input id="password" name="password" type="password" placeholder="Ingrese su contraseña">
         <input type="submit" value="Entrar">
         <a href="#">Olvidaste la contrasena?</a><br>
         <a routerLink='/signup'>Registrate</a><br>
