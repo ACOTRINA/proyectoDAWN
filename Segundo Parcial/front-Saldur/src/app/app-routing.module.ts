@@ -25,8 +25,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'grafica', component: GraficasComponent},
-  {path: 'admin', component: AdministratorComponent},
-  {path: 'user', component: ClienteComponent},
+  {path: 'admin/:id', component: AdministratorComponent},
+  {path: 'user/:id', component: ClienteComponent},
   //{path:'user/perfil', component:PerfilComponent}
 
 
