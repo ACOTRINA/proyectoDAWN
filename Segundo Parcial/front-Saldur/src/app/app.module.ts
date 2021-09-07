@@ -11,6 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatTableModule} from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -78,6 +79,7 @@ import { ReporteProductosComponent } from './usersModules/administrator/reporte-
     MatSelectModule,
     MatCardModule,
     MatBadgeModule,
+    MatTableModule
   ],
   providers: [MessageService,GraficasService],
   bootstrap: [AppComponent]
