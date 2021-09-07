@@ -37,6 +37,7 @@ import { ListaComponent } from './usersModules/cliente/lista/lista.component';
 import { ReporteProductosComponent } from './usersModules/administrator/reporte-productos/reporte-productos.component';
 import { BarComponent } from './usersModules/administrator/bar/bar.component';
 import { PieComponent } from './usersModules/administrator/pie/pie.component';
+import { AgregarProductoComponent } from './usersModules/administrator/agregar-producto/agregar-producto.component';
 
 
 
@@ -63,6 +64,7 @@ import { PieComponent } from './usersModules/administrator/pie/pie.component';
     ReporteProductosComponent,
     BarComponent,
     PieComponent,
+    AgregarProductoComponent,
     
 
 
