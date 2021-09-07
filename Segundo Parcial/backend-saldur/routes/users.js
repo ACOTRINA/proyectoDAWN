@@ -1,12 +1,18 @@
 var express = require('express');
 var router = express.Router();
+const multipart = require('connect-multiparty'); 
 const sequelize = require('../models/index.js').sequelize;
 const user = require('../models').usuario;
 const lista = require('../models').lista_producto;
+const Producto = require('../models').producto;
 
 var bd = '';
 var idusuario = '';
   
+
+const multipartMiddleware = multipart({  
+  uploadDir: './subidas'
+});
 
   router.get('/listausuarios', function(req, res, next){
     user.findAll({
@@ -174,6 +180,53 @@ router.get('/listas/'+idusuario, function(req, res, next) {
         res.send(listas)
     })
     .catch(error => res.status(400).send(error))
+});
+
+
+router.post("/productos", multipartMiddleware,(req,res,next)=>{
+    
+  let nombre1= req.body.nombre;
+  let codigo1 = req.body.codigo;
+  let tipo1 = req.body.tipo;
+  /*let reader = new FileReader();
+  //let cantidad= req.body.cantidad;
+  var blob1 = new Blob([new Uint8Array(req.body.imagen)]); 
+  const imageUrl = URL.createObjectURL(blob1);  
+  console.log(imageUrl);//blob:http://localhost:8100/c489.etc  
+  reader.readAsDataURL(new Blob([new Uint8Array(i.imagen.data)])); 
+  reader.onloadend = function() {
+      base64data = reader.result;     
+  }
+  this.myFunction(base64data)*/
+
+  let imagen1= req.body.imagen;
+  
+  //{ force: true }
+  (async()=>{
+      //await sequelize.sync();
+      console.log("alch")
+      
+      const usuario = await Producto.create({
+          codigo: codigo1,
+          nombre: nombre1,
+          tipo: tipo1,
+          imagen: "./subidas/lbYGe94zfIybfgprEVZy6mvL.jpg",
+          createdAt: new Date(),
+          updatedAt: new Date()
+      })
+      //.then(image =>{
+          //fs.writeFileSync(__dirname + '/static/assets/tmp/tmp-jsa-header.png', image.data);		
+
+      //})
+
+      //await usuario.save();
+      res.redirect('http://localhost:4200/admin/'+ idusuario)
+     
+  })();
+  
+  
+
+
 });
 
 router.get('/logout', function(req, res ,next){

@@ -2,7 +2,14 @@
     <div class="card px-1 py-4">
         <div class="card-body">
             <h2 class="card-title mb-3 text-center font-weight-bold">Nuevo Producto</h2>
-            <form method="POST" action="http://localhost:3001/productos/">
+            <form ngNoForm method="POST" action="http://localhost:3001/users/productos">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group"> <input class="form-control" type="text" placeholder="Codigo" name="codigo"> </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
@@ -12,7 +19,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
-                            <div class="input-group"> <input class="form-control" type="text" placeholder="Tipo de Producto" name="codigo"> </div>
+                            <div class="input-group"> <input class="form-control" type="text" placeholder="Tipo de Producto" name="tipo"> </div>
                         </div>
                     </div>
                 </div>
