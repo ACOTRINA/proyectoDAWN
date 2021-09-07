@@ -220,7 +220,7 @@ router.post("/productos", multipartMiddleware,(req,res,next)=>{
       //})
 
       //await usuario.save();
-      res.redirect('http://localhost:4200/admin/'+ idusuario)
+      res.redirect("http://localhost:4200/admin/" + idusuario);
      
   })();
   
