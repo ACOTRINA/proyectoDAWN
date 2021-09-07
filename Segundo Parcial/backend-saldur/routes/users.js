@@ -144,7 +144,7 @@ router.post('/save/actualizar/'+ idusuario, function(req, res, next) {
 })
 
 
-router.post("/listas/"+idusuario, function(req, res, next) {
+router.post("/lista/"+idusuario, function(req, res, next) {
   let nombre1= req.body.nombre;
   //let idusuario = req.params.id;
 
@@ -160,6 +160,20 @@ router.post("/listas/"+idusuario, function(req, res, next) {
       res.redirect("http://localhost:4200/user/" + idusuario);
 })();
 
+});
+
+router.get('/listas/'+idusuario, function(req, res, next) {
+    
+  lista.findAll({
+      include: [{ model: user }],
+      where:{
+        usuarioId: idusuario,
+      }
+    })
+    .then(listas => {
+        res.send(listas)
+    })
+    .catch(error => res.status(400).send(error))
 });
 
 router.get('/logout', function(req, res ,next){

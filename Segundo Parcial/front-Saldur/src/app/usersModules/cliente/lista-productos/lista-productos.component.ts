@@ -14,7 +14,7 @@ export class ListaProductosComponent implements OnInit {
 
     // Realice la petición al URL http://localhost:3001/clientes
     // Guarde el resultado en el atributo clientes
-    fetch("http://localhost:3001/listas")
+    fetch("http://localhost:3001/users/listas")
     .then(response => response.json())
     .then(listas => {
       this.listas = listas 
