@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const sequelize = require('../models/index.js').sequelize;
 const user = require('../models').usuario;
+const lista = require('../models').lista_producto;
 
 var bd = '';
 var idusuario = '';
@@ -98,12 +99,8 @@ router.post('/validate', function(req, res, next) {
 
 
 
-router.get('/logout', function(req, res ,next){
-    req.session = null;
-    bd = '';
-    idusuario ='';
-    res.redirect('http://localhost:4200/login');
-})
+
+
 router.post('/save/actualizar/'+ idusuario, function(req, res, next) {
   let nombre= req.body.nombre;
   let apellido= req.body.apellido;
@@ -114,7 +111,7 @@ router.post('/save/actualizar/'+ idusuario, function(req, res, next) {
   let correo= req.body.correo;
   let contrasenia= req.body.contrasenia;
 
-  
+  console.log(idusuario);
    
     // Found an item, update it
     
@@ -136,7 +133,7 @@ router.post('/save/actualizar/'+ idusuario, function(req, res, next) {
             }
           });
       
-          res.redirect('http://localhost:4200/')
+          res.redirect('http://localhost:4200/user/'+idusuario)
       })();
   
       
@@ -144,6 +141,32 @@ router.post('/save/actualizar/'+ idusuario, function(req, res, next) {
   
   
   
+})
+
+
+router.post("/listas/"+idusuario, function(req, res, next) {
+  let nombre1= req.body.nombre;
+  //let idusuario = req.params.id;
+
+
+  (async()=>{
+      const listas = await lista.create({
+          nombre: nombre1,
+          usuarioId: idusuario,
+          createdAt: new Date(),
+          updatedAt: new Date()
+      })
+
+      res.redirect("http://localhost:4200/user/" + idusuario);
+})();
+
+});
+
+router.get('/logout', function(req, res ,next){
+  req.session = null;
+  bd = '';
+  idusuario ='';
+  res.redirect('http://localhost:4200/login');
 })
 
 module.exports = router;

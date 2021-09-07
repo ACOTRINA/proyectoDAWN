@@ -17,8 +17,9 @@ router.get('/', function(req, res, next) {
       .catch(error => res.status(400).send(error))
   });
 
-router.post("/", function(req, res, next) {
+/*router.post("/user/:id", function(req, res, next) {
     let nombre1= req.body.nombre;
+    let idusuario = req.params.id;
 
 
     (async()=>{
@@ -29,10 +30,10 @@ router.post("/", function(req, res, next) {
             updatedAt: new Date()
         })
 
-        res.redirect('http://localhost:4200/user/listas')
+        res.redirect('http://localhost:4200/user/'+ idusuario)
 })();
 
-});
+});*/
 
 
 module.exports = router;
