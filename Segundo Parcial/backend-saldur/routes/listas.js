@@ -5,7 +5,7 @@ var fs = require('fs');
 //const sequelize = require("sequelize");
 const lista = require('../models').lista_producto;
 const usuario = require('../models').usuario;
-
+var idusuario = '';
 router.get('/', function(req, res, next) {
     
     lista.findAll({
@@ -24,12 +24,12 @@ router.post("/", function(req, res, next) {
     (async()=>{
         const listas = await lista.create({
             nombre: nombre1,
-            usuarioId: 5,
+            usuarioId: idusuario,
             createdAt: new Date(),
             updatedAt: new Date()
         })
 
-        res.redirect('http://localhost:4200/listas')
+        res.redirect('http://localhost:4200/user/listas')
 })();
 
 });

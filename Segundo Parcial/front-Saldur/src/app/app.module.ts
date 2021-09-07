@@ -31,6 +31,8 @@ import { GraficasService } from './services/graficas.service';
 import { ClienteComponent } from './usersModules/cliente/cliente.component';
 import { AdministratorComponent } from './usersModules/administrator/administrator.component';
 import { PerfilComponent } from './usersModules/cliente/perfil/perfil.component';
+import { ListaProductosComponent } from './usersModules/cliente/lista-productos/lista-productos.component';
+import { ListaComponent } from './usersModules/cliente/lista/lista.component';
 
 
 
@@ -52,6 +54,8 @@ import { PerfilComponent } from './usersModules/cliente/perfil/perfil.component'
     ClienteComponent,
     AdministratorComponent,
     PerfilComponent,
+    ListaComponent,
+    ListaProductosComponent,
     
 
 
@@ -71,7 +75,7 @@ import { PerfilComponent } from './usersModules/cliente/perfil/perfil.component'
     MatFormFieldModule,
     MatSelectModule,
     MatCardModule,
-    MatBadgeModule
+    MatBadgeModule,
   ],
   providers: [MessageService,GraficasService],
   bootstrap: [AppComponent]

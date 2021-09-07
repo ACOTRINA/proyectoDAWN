@@ -13,6 +13,8 @@ import { GraficasComponent } from './graficas/graficas.component';
 import { AdministratorComponent } from './usersModules/administrator/administrator.component';
 import { ClienteComponent } from './usersModules/cliente/cliente.component';
 //import { PerfilComponent } from './usersModules/cliente/perfil/perfil.component';
+//import { ListaComponent } from './usersModules/cliente/lista/lista.component';
+//import { ListaProductosComponent } from './usersModules/cliente/lista-productos/lista-productos.component';
 
 
 const routes: Routes = [
@@ -28,7 +30,8 @@ const routes: Routes = [
   {path: 'admin/:id', component: AdministratorComponent},
   {path: 'user/:id', component: ClienteComponent},
   //{path:'user/perfil', component:PerfilComponent}
-
+  //{path:'user/lista', component:ListaComponent},
+  //{path:'user/listas', component:ListaProductosComponent}
 
 ];
 

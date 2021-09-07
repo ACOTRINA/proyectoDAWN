@@ -8,7 +8,9 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent implements OnInit {
-  showperfil = true
+  showperfil = true;
+  showlistas = true;
+  showcrearlista = true;
   id = '';
   constructor(app:AppComponent, private rutaActiva: ActivatedRoute) {
     app.showNav = true;
@@ -25,7 +27,20 @@ export class ClienteComponent implements OnInit {
   }
 
   cambiarPerfil(): void {
+    this.showcrearlista = true;
+    this.showlistas = true;
     this.showperfil = false;
+  }
+
+  cambiarLista(): void {
+    this.showlistas = true;
+    this.showperfil = true;
+    this.showcrearlista = false;
+  }
+  cambiarListas(): void {
+    this.showperfil = true;
+    this.showcrearlista = true;
+    this.showlistas = false;
   }
 
   

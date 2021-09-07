@@ -104,5 +104,46 @@ router.get('/logout', function(req, res ,next){
     idusuario ='';
     res.redirect('http://localhost:4200/login');
 })
+router.post('/save/actualizar/'+ idusuario, function(req, res, next) {
+  let nombre= req.body.nombre;
+  let apellido= req.body.apellido;
+  let pais= req.body.pais;
+  let ciudad= req.body.ciudad;
+  let telefono= req.body.telefono;
+  let direccion= req.body.direccion;
+  let correo= req.body.correo;
+  let contrasenia= req.body.contrasenia;
+
+  
+   
+    // Found an item, update it
+    
+         (async()=>{
+          
+          const usuarios = await user.update({
+            nombre: nombre,
+            apellido:apellido,
+            fechaNacimiento: new Date,
+            pais: pais,
+            ciudad: ciudad,
+            telefono: telefono,
+            direccion: direccion,
+            correo: correo,
+            contrasenia:contrasenia,
+          }, {
+            where: {
+                id: idusuario,
+            }
+          });
+      
+          res.redirect('http://localhost:4200/')
+      })();
+  
+      
+    
+  
+  
+  
+})
 
 module.exports = router;
