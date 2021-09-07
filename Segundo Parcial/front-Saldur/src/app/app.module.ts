@@ -33,6 +33,7 @@ import { AdministratorComponent } from './usersModules/administrator/administrat
 import { PerfilComponent } from './usersModules/cliente/perfil/perfil.component';
 import { ListaProductosComponent } from './usersModules/cliente/lista-productos/lista-productos.component';
 import { ListaComponent } from './usersModules/cliente/lista/lista.component';
+import { ReporteProductosComponent } from './usersModules/administrator/reporte-productos/reporte-productos.component';
 
 
 
@@ -56,6 +57,7 @@ import { ListaComponent } from './usersModules/cliente/lista/lista.component';
     PerfilComponent,
     ListaComponent,
     ListaProductosComponent,
+    ReporteProductosComponent,
     
 
 
