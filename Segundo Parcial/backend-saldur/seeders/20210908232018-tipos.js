@@ -11,21 +11,23 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
+
      for (let i = 0; i <1; i++) {
-      await queryInterface.bulkInsert('roles', [{
-          descripcion: "Usuario Cliente",
+      await queryInterface.bulkInsert('tipos', [{
+          nombre: 'Hidráulico',
           createdAt: new Date(),
-          updatedAt: new Date()
+          updatedAt: new Date(),
       }], {});
       }
 
       for (let i = 0; i <1; i++) {
-        await queryInterface.bulkInsert('roles', [{
-            descripcion: "Usuario Administrador",
+        await queryInterface.bulkInsert('tipos', [{
+            nombre: 'Transmisión',
             createdAt: new Date(),
-            updatedAt: new Date()
+            updatedAt: new Date(),
         }], {});
-        }
+      }
+
   },
 
   down: async (queryInterface, Sequelize) => {

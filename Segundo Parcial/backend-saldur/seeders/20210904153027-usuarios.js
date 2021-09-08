@@ -26,7 +26,23 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date()
       }], {});
-   }
+    }
+      for (let i = 0; i <1; i++) {
+        await queryInterface.bulkInsert('usuarios', [{
+            nombre: 'Nombre admin '+i,
+            apellido: 'Apellido admin '+i,
+            fechaNacimiento: new Date(),
+            pais: "Pais",
+            ciudad: "Ciudad",
+            direccion: "Dirección admin" +i,
+            telefono: "Teléfono admin" +i,
+            correo: "admin"+i+"@gmail.com",
+            contrasenia: "admin",
+            rolId: 2,
+            createdAt: new Date(),
+            updatedAt: new Date()
+        }], {});
+    }
   },
 
   down: async (queryInterface, Sequelize) => {

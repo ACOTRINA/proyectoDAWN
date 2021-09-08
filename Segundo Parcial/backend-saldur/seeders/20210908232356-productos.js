@@ -11,16 +11,26 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-     for (let i = 0; i <10; i++) {
+     for (let i = 1; i <6; i++) {
       await queryInterface.bulkInsert('Productos', [{
-          nombre: 'Hidraulico '+i,
+          nombre: 'Producto',
           codigo: 10+i,
-          tipo: "caneca",
-          imagen: "./subidas/lbYGe94zfIybfgprEVZy6mvL.jpg",
+          presentacion: "Caneca",
+          tipoId: 1,
           createdAt: new Date(),
           updatedAt: new Date()
       }], {});
-   }
+    }
+    for (let i = 6; i <11; i++) {
+      await queryInterface.bulkInsert('Productos', [{
+          nombre: 'Producto',
+          codigo: 20+i,
+          presentacion: "Tanque",
+          tipoId: 2,
+          createdAt: new Date(),
+          updatedAt: new Date()
+      }], {});
+ }
   },
 
   down: async (queryInterface, Sequelize) => {
