@@ -7,10 +7,13 @@
   
   <mat-drawer-container class="container-fluid" value="true">
     <mat-drawer #drawer value="side" class="pegaito">
-        <button mat-stroked-button color="grey"  class="container-fluid espacio-boton" (click) = "cambiarReporte();drawer.close();">Reportes</button><br>
-        <button mat-stroked-button color="grey"  class="container-fluid espacio-boton" (click) = "editarClientes();drawer.close();">Editar clientes</button><br>
+
+        <button mat-stroked-button color="primary"  class="container-fluid espacio-boton" (click) = "drawer.close();inicio()">inicio</button><br>
+        <button mat-stroked-button color="grey"  class="container-fluid espacio-boton" (click) = "drawer.close();mostrarReporte();">Reportes</button><br>
+        <button mat-stroked-button color="grey"  class="container-fluid espacio-boton" (click) = "drawer.close();mostrarEditarClientes();">Clientes</button><br>
         <button mat-stroked-button color="grey"  class="container-fluid espacio-boton" (click) = "cambiarAgregarProducto();drawer.close();">Agregar Productos</button><br>
-        <button mat-stroked-button color="warn"  class="container-fluid espacio-boton" (click) = "drawer.close();">Log out</button><br>
+        <a href="http://localhost:3001/users/logout"><button mat-stroked-button color="warn"  class="container-fluid espacio-boton" (click) = "drawer.close();">Log out</button></a><br>
+
        <!--aquí abajo se pueden agregar mas opciones--> 
 
 
@@ -19,9 +22,12 @@
     <mat-drawer-content>
       Aquí van las tablas y gráficas. Usar componentes para las gráficas <br>
 
+
       <app-reporte-productos *ngIf="!showreporte"></app-reporte-productos>
       <app-agregar-producto *ngIf="!showdubirproducto"></app-agregar-producto>
       <!-- <app-lista-productos *ngIf="!editarclientes"></app-lista-productos> -->
+      <app-bar *ngIf="!showbar"></app-bar>
+      <app-pie *ngIf="!showpie"></app-pie>
       <br>
       <br>
       <br>
@@ -44,86 +50,7 @@
       <br>
       <br>
       <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+ 
     </mat-drawer-content>
   </mat-drawer-container>
   

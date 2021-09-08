@@ -8,13 +8,21 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./administrator.component.css']
 })
 export class AdministratorComponent implements OnInit {
+
   editarclientes = true;
-  showreporte = true;
   showdubirproducto= true;
   id = '';
+
+  
+  showreporte: boolean = true;
+  showbar: boolean = false;
+  showpie: boolean = false;
+
   constructor(app:AppComponent, private rutaActiva: ActivatedRoute) { 
+
     app.showNav = true;
-    app.showFoot = true; 
+    app.showFoot = true
+
   }
 
   ngOnInit(): void {
@@ -30,6 +38,7 @@ export class AdministratorComponent implements OnInit {
     this.editarclientes = false;
   }
 
+
   cambiarReporte(): void {
     this.editarclientes = true;
     this.showdubirproducto = true;
@@ -40,4 +49,24 @@ export class AdministratorComponent implements OnInit {
     this.showreporte = true;
     this.showdubirproducto = false;
   }
+
+
+  mostrarReporte(): void {
+    this.showreporte =  false;
+    this.showpie = true;
+    this.showbar = true;
+  }
+
+  mostrarEditarClientes(): void {
+    this.showreporte = true;
+
+  }
+
+  inicio(): void {
+    this.showreporte =  true;
+    this.showpie = false;
+    this.showbar = false;
+  }
+
+
 }
