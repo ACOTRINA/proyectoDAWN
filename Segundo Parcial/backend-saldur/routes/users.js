@@ -192,12 +192,19 @@ router.post("/listausuario/:idLista", function(req, res, next) {
 
 
       (async()=>{
-        const borrar = await lista.destroy({
+        const borrar1 = await detalle.destroy({
            where: {
-            id: id,}
+            listaId: id,}
           
           
         })
+        const borrar = await lista.destroy({
+          where: {
+           id: id,}
+         
+         
+       })
+
 
         res.redirect("http://localhost:4200/user/" + idusuario);
     })();
