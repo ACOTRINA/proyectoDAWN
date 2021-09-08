@@ -9,6 +9,7 @@ import { AppComponent } from '../app.component';
 export class ProductosComponent implements OnInit {
   
   productos:Array<any> = [];
+  productoFiltrado: Array<any> = [];
   constructor(app:AppComponent) {
     app.showNav = false;
     app.showFoot = false; 
@@ -19,17 +20,36 @@ export class ProductosComponent implements OnInit {
   }
 
   cargarProductos(): void {
-    fetch("http://localhost:3001/productosactuales")
+    fetch("assets/databases/data.json")
     .then(response => response.json())
     .then(productos => {
      
-      for(let producto of productos){
-        this.productos = producto;
-      }
+      this.productos =  productos.productos
+      console.log(this.productos)
     })
     .catch(console.error);
 
   }
+
+  filtroCaneca(): void {
+    for(let producto of this.productos){
+      if(producto.imagen.includes('Caneca')){
+        this.productoFiltrado.push(producto);
+      }
+      this.productos = this.productoFiltrado;
+    }
   }
+
+  filtroTanque(): void {
+    for(let producto of this.productos){
+      if(producto.imagen.includes('Tanque')){
+        this.productoFiltrado.push(producto);
+      }
+      this.productos = this.productoFiltrado;
+    }
+  }
+
+  
+  
 
 }

@@ -3,16 +3,21 @@
       <div id="menubtn">
           <h1 id="titulo_producto">NUESTROS PRODUCTOS</h1>
           <div class="btn_producto">
-            <button id="Todos" type="button" class="btn btn-warning" data-intro="Si deseas ver todos nuestros productos, presiona este botón." data-step="1">Todos</button>
-            <button id="Tanques" type="button" class="btn btn-info" data-intro="Si deseas ver solo los tanques, presiona este botón.." data-step="2">Tanques</button>
-            <button id="Canecas" type="button" class="btn btn-success" data-intro="Si deseas ver solo las canecas, presiona este botón" data-step="3">Canecas</button>
+            <button id="Todos" type="button" class="btn btn-warning" data-intro="Si deseas ver todos nuestros productos, presiona este botón." data-step="1" (click) ="cargarProductos()">Todos</button>
+            <button id="Tanques" type="button" class="btn btn-info" data-intro="Si deseas ver solo los tanques, presiona este botón.." data-step="2" (click) ="cargarProductos();filtroTanque()">Tanques</button>
+            <button id="Canecas" type="button" class="btn btn-success" data-intro="Si deseas ver solo las canecas, presiona este botón" data-step="3"(click) ="cargarProductos();filtroCaneca()">Canecas</button>
           </div>
       </div>
-      <div class="productos" id="productos">
-
-      </div>
+ 
     </div>
   <div id="productos-lista">
+    <div *ngFor="let producto of productos" class="caja">
+      <img class="img_producto" src="assets/{{producto.imagen}}"  class = "imagenes">
+      <div class="informacion_prod">
+          <h3 class="nombres_prod">{{producto.nombre}}</h3>
+          <small class="codigo_prod">{{producto.codigo}}</small>
+      </div>
+      </div>
 
   </div>
   </section>

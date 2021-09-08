@@ -110,8 +110,8 @@
     width: 400px;
     height: 300px;
     padding: 0;
-    /* border: 1px solid blue; */
-    margin: 10px 50px;
+    border: 1px solid blue;
+    margin: 70px 50px;
     width: 200px;
     transition: 1s;
 
