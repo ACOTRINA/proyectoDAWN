@@ -5,6 +5,8 @@ const sequelize = require('../models/index.js').sequelize;
 const user = require('../models').usuario;
 const lista = require('../models').lista_producto;
 const Producto = require('../models').producto;
+const detalle = require('../models').detalle_lista;
+//const producto = require('../models/producto.js');
 
 var bd = '';
 var idusuario = '';
@@ -183,6 +185,30 @@ router.get('/listas/'+idusuario, function(req, res, next) {
 });
 
 
+router.post("/listausuario/:idLista", function(req, res, next) {
+  //let nombre1= req.body.nombre;
+  //let idusuario = req.params.id
+  id=req.params.idLista,
+
+
+      (async()=>{
+        const borrar = await lista.destroy({
+           where: {
+            id: id,}
+          
+          
+        })
+
+        res.redirect("http://localhost:4200/user/" + idusuario);
+    })();
+
+
+
+  
+
+});
+
+
 router.post("/productos", multipartMiddleware,(req,res,next)=>{
     
   let nombre1= req.body.nombre;
@@ -228,6 +254,30 @@ router.post("/productos", multipartMiddleware,(req,res,next)=>{
 
 
 });
+
+router.post('/detalle', function(req, res, next){
+  let idlista = req.body.idLista;
+  let idProducto = req.body.idProducto;
+  (async()=>{
+    const detalles = await detalle.create({ 
+      fechaCreacion: new Date(), 
+      numeroProductos: 1, 
+      listaId: idlista,
+      productoId: idProducto,
+      createdAt: new Date(), 
+      updatedAt: new Date(),
+     })
+
+     res.redirect("http://localhost:4200/user/" + idusuario);
+})();
+
+});
+
+
+
+
+
+
 
 router.get('/logout', function(req, res ,next){
   req.session = null;

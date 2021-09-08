@@ -6,17 +6,27 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
     <title><%= title%></title>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("inputGroupSelect01").value;
+        document.getElementById("colocar").innerHTML =  x;
+      }
+    </script>
   </head>
   <body>
     <div>
       <div id="botonCrearLista">
-          <button type="button" class="btn btn-success" routerLink="/user/lista">Crear Lista</button>
+          <!-- <button type="button" class="btn btn-success" routerLink="/user/lista">Crear Lista</button> -->
+          <h2>Listas</h2>  
       </div>
       <div *ngFor="let lista of listas">
           <mat-card class="example-card">
               <mat-card-header id="cabeceraLista">
+                  
                   <div id="botonEliminar"> 
-                      <button type="button" class="btn btn-secondary eliminar">X</button>
+                    <form ngNoForm method="POST" action="http://localhost:3001/users/listausuario/{{lista.id}}">
+                      <button class="btn btn-secondary eliminar" type="submit" >X</button>
+                    </form>
                   </div>
                   <div id="datosCabeceraLista">
                       <!-- <div mat-card-avatar class="example-header-image"></div> -->
@@ -27,17 +37,61 @@
               </mat-card-header>
               <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
               <mat-card-content>
+                
                 <div >
-                  <select class="custom-select" id="inputGroupSelect01">
+                  <!-- <select class="custom-select" id="inputGroupSelect01" onchange="myFunction()">
                     <option selected>Producto</option>
-                    <option *ngFor="let producto of productos" value="{{producto.id}}">{{producto.nombre}}</option>
-                    <!-- <div *ngFor="let producto of productos">
+                    <option *ngFor="let producto of productos" value="{{producto.nombre}}" >{{producto.nombre}}</option>
+                    
+    
+                  </select> -->
+                  <!-- <div *ngFor="let producto of productos">
                       <option value="{{producto.id}}">{{producto.nombre}}</option>
                     </div> -->
-    
-                  </select>
+
+                  <form ngNoForm method="POST" action="http://localhost:3001/users/detalle">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Producto</mat-label>
+                      <mat-select [(value)]="selectedProducto" >
+                        <mat-option value="Productos" selected></mat-option>
+                        <mat-option  *ngFor="let producto of productos" value="{{producto.id}}" >
+                          {{producto.nombre}} 
+                        </mat-option>
+                      </mat-select>
+                    
+                        
+                      
+                    </mat-form-field>
+                    <input class="form-control" type="hidden" placeholder="idLista" name="idLista" value="{{lista.id}}">
+                    <input class="form-control" type="hidden" placeholder="idProducto" name="idProducto" value="{{selectedProducto}}">
+                    
+                    <p> Producto seleccionado: {{selectedProducto}} </p>
+                    <input class="form-control" type="hidden" placeholder="Nombre Producto" name="nombrePrProducto" value="{{selectedProducto}}">
+                    
+                    <button mat-raised-button type="submit" color="primary">Guardar</button>
+
+                  </form>
+
+
+
                 </div>
-                
+                <div id="colocar" *ngFor="let detalle of detalles">
+                  <div  *ngFor="let producto of productos">
+                    <div *ngIf="detalle.listaId=== lista.id">
+                      <div *ngIf="detalle.productoId=== producto.id">
+                        <tr>
+                          <td>{{producto.nombre}}</td>
+                        </tr>
+                      </div>
+  
+                    </div>
+
+
+                  </div>
+                  
+
+                </div>
+
                 <!-- <p>
                   The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
                   A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
