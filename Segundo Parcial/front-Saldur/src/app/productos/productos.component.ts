@@ -24,28 +24,30 @@ export class ProductosComponent implements OnInit {
     .then(response => response.json())
     .then(productos => {
      
-      this.productos =  productos.productos
-      console.log(this.productos)
+      this.productos =  productos.productos;
+      this.productoFiltrado = this.productos;
     })
     .catch(console.error);
 
   }
 
   filtroCaneca(): void {
+    this.productoFiltrado = []
     for(let producto of this.productos){
       if(producto.imagen.includes('Caneca')){
         this.productoFiltrado.push(producto);
       }
-      this.productos = this.productoFiltrado;
+      
     }
   }
 
   filtroTanque(): void {
+    this.productoFiltrado = [];
     for(let producto of this.productos){
       if(producto.imagen.includes('Tanque')){
         this.productoFiltrado.push(producto);
       }
-      this.productos = this.productoFiltrado;
+     
     }
   }
 
