@@ -17,6 +17,7 @@ export class AdministratorComponent implements OnInit {
   showreporte: boolean = true;
   showbar: boolean = false;
   showpie: boolean = false;
+  showmultiline: boolean = false;
 
   constructor(app:AppComponent, private rutaActiva: ActivatedRoute) { 
 
@@ -44,10 +45,14 @@ export class AdministratorComponent implements OnInit {
     this.showdubirproducto = true;
     this.showreporte = false;
   }
+
   cambiarAgregarProducto(): void {
     this.editarclientes = true;
     this.showreporte = true;
     this.showdubirproducto = false;
+    this.showmultiline = true;
+    this.showpie = true;
+    this.showbar = true;
   }
 
 
@@ -55,6 +60,8 @@ export class AdministratorComponent implements OnInit {
     this.showreporte =  false;
     this.showpie = true;
     this.showbar = true;
+    this.showmultiline = true;
+    this.showdubirproducto = true;
   }
 
   mostrarEditarClientes(): void {
@@ -66,6 +73,8 @@ export class AdministratorComponent implements OnInit {
     this.showreporte =  true;
     this.showpie = false;
     this.showbar = false;
+    this.showmultiline = false;
+    this.showdubirproducto = true;
   }
 
 

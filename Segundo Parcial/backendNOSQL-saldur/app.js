@@ -8,6 +8,7 @@ var cors = require('cors')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productoRouter = require('./routes/productosRoutes');
+var productosActualesRouter = require('./routes/productosactualesRoutes')
 
 var app = express();
 const nodb = require('./models');
@@ -22,5 +23,6 @@ app.use(cors())
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/productos', productoRouter);
+app.use('/productosactuales', productosActualesRouter);
 
 module.exports = app;
