@@ -14,7 +14,7 @@ module.exports = {
 
      for (let i = 0; i <1; i++) {
       await queryInterface.bulkInsert('tipos', [{
-          nombre: 'Hidráulico',
+          nombre: 'Hidraulico',
           createdAt: new Date(),
           updatedAt: new Date(),
       }], {});
