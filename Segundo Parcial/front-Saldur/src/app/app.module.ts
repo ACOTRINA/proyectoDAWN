@@ -38,6 +38,7 @@ import { ReporteProductosComponent } from './usersModules/administrator/reporte-
 import { BarComponent } from './usersModules/administrator/bar/bar.component';
 import { PieComponent } from './usersModules/administrator/pie/pie.component';
 import { AgregarProductoComponent } from './usersModules/administrator/agregar-producto/agregar-producto.component';
+import { MultilineComponent } from './usersModules/administrator/multiline/multiline.component';
 
 
 
@@ -65,6 +66,7 @@ import { AgregarProductoComponent } from './usersModules/administrator/agregar-p
     BarComponent,
     PieComponent,
     AgregarProductoComponent,
+    MultilineComponent,
     
 
 
