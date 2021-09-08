@@ -14,11 +14,16 @@ module.exports = {
       nombre: {
         type: Sequelize.STRING
       },
-      tipo: {
+      presentacion: {
         type: Sequelize.STRING
       },
-      imagen: {
-        type: Sequelize.STRING
+      tipoId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: { 
+               model: 'tipos',
+               key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
