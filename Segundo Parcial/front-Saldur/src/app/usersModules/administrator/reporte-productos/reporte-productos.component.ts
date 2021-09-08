@@ -29,14 +29,6 @@ export class ReporteProductosComponent implements OnInit {
     .catch(console.error);
 
 
-    
-
-    
-
-
-
-
-
 
   }
 
