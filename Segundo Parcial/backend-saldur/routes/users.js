@@ -220,7 +220,7 @@ router.post("/productos", multipartMiddleware,(req,res,next)=>{
     
   let nombre1= req.body.nombre;
   let codigo1 = req.body.codigo;
-  let tipo1 = req.body.tipo;
+  let presentacion1 = req.body.presentacion;
   /*let reader = new FileReader();
   //let cantidad= req.body.cantidad;
   var blob1 = new Blob([new Uint8Array(req.body.imagen)]); 
@@ -232,18 +232,16 @@ router.post("/productos", multipartMiddleware,(req,res,next)=>{
   }
   this.myFunction(base64data)*/
 
-  let imagen1= req.body.imagen;
   
   //{ force: true }
   (async()=>{
       //await sequelize.sync();
-      console.log("alch")
       
-      const usuario = await Producto.create({
+      const producto = await Producto.create({
           codigo: codigo1,
           nombre: nombre1,
-          tipo: tipo1,
-          imagen: "./subidas/lbYGe94zfIybfgprEVZy6mvL.jpg",
+          presentacion: presentacion1,
+          tipoId: 1,
           createdAt: new Date(),
           updatedAt: new Date()
       })

@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Bakugo_23y24",
+    "password": null,
     "database": "proyectodawm",
     "host": "127.0.0.1",
     "dialect": "mysql"

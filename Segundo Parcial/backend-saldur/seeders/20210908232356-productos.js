@@ -13,7 +13,7 @@ module.exports = {
     */
      for (let i = 1; i <6; i++) {
       await queryInterface.bulkInsert('Productos', [{
-          nombre: 'Producto',
+          nombre: 'Producto'+ i,
           codigo: 10+i,
           presentacion: "Caneca",
           tipoId: 1,
@@ -23,7 +23,7 @@ module.exports = {
     }
     for (let i = 6; i <11; i++) {
       await queryInterface.bulkInsert('Productos', [{
-          nombre: 'Producto',
+          nombre: 'Producto'+ i,
           codigo: 20+i,
           presentacion: "Tanque",
           tipoId: 2,
