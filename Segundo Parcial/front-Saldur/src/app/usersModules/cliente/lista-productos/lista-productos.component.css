@@ -31,3 +31,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
+h1{
+  color: white;
+}

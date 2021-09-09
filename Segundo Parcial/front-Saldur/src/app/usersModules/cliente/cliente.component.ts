@@ -9,7 +9,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class ClienteComponent implements OnInit {
   showperfil = true;
-  showlistas = true;
+  showlistas = false;
   showcrearlista = true;
   id = '';
   nombreusuario: string = '';
