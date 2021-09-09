@@ -6,3 +6,8 @@
     padding: 10px;
     /* border: solid 1px blue; */
 }
+
+#actualizarPerfil{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}

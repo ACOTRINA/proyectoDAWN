@@ -50,7 +50,7 @@ router.post('/save', function(req, res, next){
   let password =  req.body.password;
 
   (async()=>{
-    const listas = await user.create({ nombre: name, apellido: lastName, fechaNacimiento: new Date(), pais: "Ecuador", ciudad: "Seleccione una", teléfono: "Ingrese teléfono", correo: correo, contrasenia: password, rolId: 1 })
+    const listas = await user.create({ nombre: name, apellido: lastName, fechaNacimiento: new Date(), pais:null, ciudad: null, teléfono: null, correo: correo, contrasenia: password, rolId: 1 })
 
     res.redirect('http://localhost:4200/login')
 })();
@@ -150,6 +150,43 @@ router.post('/save/actualizar/'+ idusuario, function(req, res, next) {
   
   
 })
+
+router.post('/save/actualizar/contrasenia'+ idusuario, function(req, res, next) {
+  
+  let contrasenia= req.body.contrasenia;
+
+  console.log(idusuario);
+   
+    // Found an item, update it
+    
+         (async()=>{
+          
+          const usuarios = await user.update({
+            
+            contrasenia:contrasenia,
+          }, {
+            where: {
+                id: idusuario,
+            }
+          });
+      
+          res.redirect('http://localhost:4200/user/'+idusuario)
+      })();
+  
+})
+
+router.get('/usuarios', function(req, res, next) {
+    
+  user.findAll({
+      where:{
+        id: idusuario,
+      }
+    })
+    .then(usuarios => {
+        res.send(usuarios)
+    })
+    .catch(error => res.status(400).send(error))
+});
 
 
 router.post("/lista/"+idusuario, function(req, res, next) {
