@@ -12,6 +12,7 @@ export class ClienteComponent implements OnInit {
   showlistas = true;
   showcrearlista = true;
   id = '';
+  nombreusuario: string = '';
   constructor(app:AppComponent, private rutaActiva: ActivatedRoute) {
     app.showNav = true;
     app.showFoot = true; 
@@ -23,8 +24,29 @@ export class ClienteComponent implements OnInit {
         this.id = params.id;
       }
     )
+
+    this.getNombre();
     
   }
+
+  getNombre(): void {
+    fetch('http://localhost:3001/users/listausuarios')
+    .then(res => res.json())
+    .then(usuarios => {
+      for(let usuario of usuarios){
+        if(usuario.id == this.id){
+          this.nombreusuario = usuario.nombre;
+
+        }
+      }
+
+
+    })
+  .catch(console.error);
+  }
+
+
+  
 
   cambiarPerfil(): void {
     this.showcrearlista = true;

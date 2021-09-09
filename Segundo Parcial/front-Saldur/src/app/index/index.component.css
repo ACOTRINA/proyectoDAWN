@@ -5,7 +5,8 @@ p, h2, h3, h4, h5{
   }
 
   h2{
-    padding: 2%;
+    letter-spacing: 0.2rem;
+    padding-right: 2rem;
   }
   
   section{

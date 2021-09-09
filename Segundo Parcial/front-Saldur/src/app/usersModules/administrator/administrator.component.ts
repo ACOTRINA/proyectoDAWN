@@ -12,6 +12,9 @@ export class AdministratorComponent implements OnInit {
   editarclientes = true;
   showdubirproducto= true;
   id = '';
+  nombreusuario: string = '';
+
+  
 
   
   showreporte: boolean = true;
@@ -32,7 +35,28 @@ export class AdministratorComponent implements OnInit {
         this.id = params.id;
       }
     )
+    this.getNombre();
   }
+
+  getNombre(): void {
+    fetch('http://localhost:3001/users/listausuarios')
+    .then(res => res.json())
+    .then(usuarios => {
+      for(let usuario of usuarios){
+        if(usuario.id == this.id){
+          this.nombreusuario = usuario.nombre;
+
+        }
+      }
+
+
+    })
+  .catch(console.error);
+
+
+  }
+
+
   editarClientes(): void {
     this.showreporte = true;
     this.showdubirproducto = true;
