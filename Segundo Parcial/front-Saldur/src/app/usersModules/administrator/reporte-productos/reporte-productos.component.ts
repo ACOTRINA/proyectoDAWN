@@ -19,7 +19,7 @@ export class ReporteProductosComponent implements OnInit {
   ngOnInit(): void {
 
     
-    fetch("http://localhost:3001/productos")
+    fetch("http://localhost:3001/tipo")
     .then(res => res.json())
     .then(productos => {
       this.data =  productos;    
@@ -27,14 +27,6 @@ export class ReporteProductosComponent implements OnInit {
 
     })
     .catch(console.error);
-
-
-    
-
-    
-
-
-
 
 
 
